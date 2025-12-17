@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     padding: 0;
@@ -25,7 +25,7 @@ button {
 }
 
 h1 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 72px;
 }
 
@@ -47,7 +47,7 @@ em {
 }
 
 section {
-    padding: 32px 96px;
+    padding: 64px 96px;
 }
 
 .flex {
@@ -93,22 +93,6 @@ section {
     height: 48px;
 }
 
-/* footer styles */
-
-.footer {
-    background-color: #f04b3f;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 200px;
-    padding: 24px 96px;
-}
-
-.footer-logo {
-    width: 200px;
-    height: auto;
-}
-
 
 /* nav bar styles */
 
@@ -117,7 +101,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 96px;
+    padding: 32px 96px;
 
 }
 
@@ -129,9 +113,8 @@ section {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 40px;
 }
-
 
 /* text styles  */
 
@@ -158,11 +141,11 @@ section {
     /* Elementi in colonna */
     align-items: center;
     /* Centra orizzontalmente */
-    gap: 20px;
+    gap: 40px;
     /* Spaziatura uniforme tra tutti gli elementi */
     text-align: center;
     color: white;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .hero-content h1 {
@@ -171,7 +154,7 @@ section {
 
 .hero-content p {
     color: #ddd;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -205,8 +188,15 @@ section {
 /* ICON */
 
 .icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
+}
+
+.nav-links-burguer {
+    display: none;
+    color: #F5F5F5;
+    width: 45px;
+    height: 45px;
 }
 
 /* ICON back-to-top */
@@ -221,7 +211,42 @@ section {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .back-to-top:hover {
     background-color: #f04b3f;
     color: #ffffff;
+}
+
+/* footer styles */
+
+.footer {
+    background-color: #f04b3f;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 200px;
+    padding: 24px 96px;
+}
+
+.footer-logo {
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    section#get-involved {
+        &>div.flex.gap {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links-burguer {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
 }
